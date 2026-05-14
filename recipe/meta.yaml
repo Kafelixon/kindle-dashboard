@@ -1,0 +1,41 @@
+{% set name = "kindle-dashboard-renderer" %}
+{% set version = "0.1.0" %}
+
+package:
+  name: {{ name }}
+  version: {{ version }}
+
+source:
+  path: ..
+
+build:
+  number: 0
+  entry_points:
+    - kindle-dashboard = kindle_dashboard.app:main
+
+requirements:
+  build:
+    - {{ compiler('cxx') }}
+    - cmake
+    - ninja
+  host:
+    - python
+    - pybind11
+    - pip
+  run:
+    - python
+    - fastapi
+    - httpx
+    - pillow
+    - uvicorn
+
+test:
+  imports:
+    - kindle_dashboard
+    - kindle_dashboard._dither
+  commands:
+    - kindle-dashboard --help
+
+about:
+  home: https://github.com/local/kindle-dashboard-renderer
+  summary: API-backed Kindle dashboard renderer with pybind11 dithering.
