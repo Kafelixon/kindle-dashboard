@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kindle-dashboard-renderer"
+version = "0.1.0"
+requires-python = ">=3.10"
+dependencies = [
+    "fastapi",
+    "httpx",
+    "pillow",
+    "uvicorn",
+]
+
+[project.scripts]
+kindle-dashboard = "kindle_dashboard.app:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["kindle_dashboard*"]
+
+[tool.setuptools.package-data]
+kindle_dashboard = ["fonts/*.ttf"]
