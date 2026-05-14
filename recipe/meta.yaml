@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  path: ..
+  url: https://github.com/Kafelixon/kindle-dashboard/archive/refs/tags/v{{ version }}.tar.gz
 
 build:
   number: 0
