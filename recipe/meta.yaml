@@ -6,7 +6,8 @@ package:
   version: {{ version }}
 
 source:
-  path: ..
+  url: https://github.com/Kafelixon/kindle-dashboard/archive/refs/tags/v{{ version }}.tar.gz
+  sha256: 0419e387e853bf0a9f37ca2125eb18d13d7252348f8b922c2b92d433c8bf5ce1
 
 build:
   number: 0
@@ -37,5 +38,5 @@ test:
     - kindle-dashboard --help
 
 about:
-  home: https://github.com/local/kindle-dashboard-renderer
+  home: https://github.com/Kafelixon/kindle-dashboard
   summary: API-backed Kindle dashboard renderer with pybind11 dithering.
