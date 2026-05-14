@@ -1,10 +1,10 @@
 [build-system]
-requires = ["setuptools>=68", "wheel"]
+requires = ["setuptools>=68", "wheel", "cmake>=3.20", "ninja", "pybind11"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "kindle-dashboard-renderer"
-version = "0.1.0"
+version = "0.1.1"
 requires-python = ">=3.10"
 dependencies = [
     "fastapi",

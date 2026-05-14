@@ -1,5 +1,5 @@
 {% set name = "kindle-dashboard-renderer" %}
-{% set version = "0.1.0" %}
+{% set version = "0.1.1" %}
 
 package:
   name: {{ name }}
@@ -20,6 +20,10 @@ requirements:
     - ninja
   host:
     - python
+    - setuptools>=68
+    - wheel
+    - cmake
+    - ninja
     - pybind11
     - pip
   run:
